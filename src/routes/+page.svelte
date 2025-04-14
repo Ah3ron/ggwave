@@ -145,31 +145,30 @@
     });
   </script>
   
-  <div class="container mx-auto p-6">
-    <div class="card shadow-lg bg-base-100 p-6">
-      <h1 class="text-2xl font-bold mb-4">Minimal <b>ggwave</b> Example</h1>
-      <p class="mb-4">JavaScript bindings with DaisyUI & Tailwind CSS</p>
+  <div class="container mx-auto p-10">
+    <div class="card shadow-2xl bg-base-200 p-8 rounded-lg">
+      <h1 class="text-4xl font-extrabold mb-6">Minimal <b class="text-accent">ggwave</b> Example</h1>
+      <p class="mb-6 text-xl">JavaScript bindings with DaisyUI & Tailwind CSS</p>
       
-      <div class="form-control mb-4">
+      <div class="form-control mb-6">
         <label for="txData" class="label">
-          <span class="label-text font-medium">Tx Data:</span>
+          <span class="label-text font-semibold text-lg">Tx Data:</span>
         </label>
-        <textarea id="txData" bind:this={txData} class="textarea textarea-bordered w-full" style="min-height:100px;">Hello javascript</textarea>
+        <textarea id="txData" bind:this={txData} class="textarea textarea-bordered textarea-lg w-full" style="min-height:120px;">Hello javascript</textarea>
       </div>
       
-      <button on:click={onSend} class="btn btn-primary mb-6">Send</button>
+      <button on:click={onSend} class="btn btn-primary btn-lg mb-8">Send</button>
       
-      <div class="form-control mb-4">
+      <div class="form-control mb-6">
         <label for="rxData" class="label">
-          <span class="label-text font-medium">Rx Data:</span>
+          <span class="label-text font-semibold text-lg">Rx Data:</span>
         </label>
-        <textarea id="rxData" bind:this={rxData} class="textarea textarea-bordered w-full" disabled style="min-height:100px;"></textarea>
+        <textarea id="rxData" bind:this={rxData} class="textarea textarea-bordered textarea-lg w-full" disabled style="min-height:120px;"></textarea>
       </div>
       
-  
-      <div class="flex space-x-4">
-        <button bind:this={captureStart} on:click={startCapture} class="btn btn-secondary">Start capturing</button>
-        <button bind:this={captureStop} on:click={stopCapture} class="btn btn-warning" hidden>Stop capturing</button>
+      <div class="flex space-x-6">
+        <button bind:this={captureStart} on:click={startCapture} class="btn btn-secondary btn-lg">Start capturing</button>
+        <button bind:this={captureStop} on:click={stopCapture} class="btn btn-warning btn-lg" hidden>Stop capturing</button>
       </div>
     </div>
   </div>
